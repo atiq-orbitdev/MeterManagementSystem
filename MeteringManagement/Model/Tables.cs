@@ -7,6 +7,7 @@ using LinqToDB.Data;
 using LinqToDB.Mapping;
 using LinqToDB.Configuration;
 using LinqToDB;
+using System.ComponentModel.DataAnnotations;
 
 namespace Metering.Model
 {
@@ -20,7 +21,9 @@ namespace Metering.Model
     public class Accounts
     {
         [Column, PrimaryKey, NotNull] public int AccountId { get; set; }
+        [Required]
         [Column, NotNull] public string FirstName { get; set; }
+        [Required]
         [Column, NotNull] public string LastName { get; set; }
     }
 
@@ -30,7 +33,9 @@ namespace Metering.Model
     public class MeterReading
     {
         [Column, PrimaryKey, NotNull] public int AccountId { get; set; }
+        [Required]
         [Column, PrimaryKey, NotNull] public string MeterReadingDateTime { get; set; }
+        [Required]
         [Column, Nullable] public string? MeterReadValue { get; set; }
     }
     public class MeterReadingResult : MeterReading
