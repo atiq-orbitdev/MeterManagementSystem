@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Metering\Metering.csproj" />
+    <ProjectReference Include="..\MeteringManagement\Metering.csproj" />
   </ItemGroup>
 
 </Project>
